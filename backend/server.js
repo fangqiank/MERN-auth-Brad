@@ -24,7 +24,6 @@ app.use('/api/users', userRoutes)
 
 if (process.env.NODE_ENV === 'production') {
   //const __dirname = path.resolve();
-	console.log('dirname', __dirname);
   //app.use(express.static(path.join(__dirname, '/.up.railway.app/frontend/dist')));
 	app.use(express.static('/frontend/dist'))
   app.get('*', (req, res) =>
