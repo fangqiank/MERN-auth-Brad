@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '/.up.railway.app/frontend/dist')));
 
   app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, '/.up.railway.app/', 'frontend', 'dist', 'index.html'))
+    res.sendFile(path.resolve(__dirname, '.up.railway.app', 'frontend', 'dist', 'index.html'))
   );
 } else {
   app.get('/', (req, res) => {
